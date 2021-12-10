@@ -1,0 +1,104 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Giriş Paneli</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<form action="#" method="POST">
+			{% csrf_token %}
+		<div class="modal-body">
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="nav-item">
+				  <a class="nav-link active" data-toggle="tab" href="#veli">Veli Girişi</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" data-toggle="tab" href="#ögretmen">Öğretmen Girişi</a>
+				</li>
+			  </ul>
+			  <div class="tab-content">
+				<div id="veli" class="container tab-pane active"><br>
+					<div class="form-floating mb-3">
+						<label for="floatingInput">E-posta Girişi</label>
+						<input type="email" name="ebeveynName" class="form-control" id="floatingInput" placeholder="veli@mail.com">
+					</div>
+					<div class="form-floating">
+						<label for="floatingPassword">Parola</label>
+						<input type="password" name="Password" class="form-control" id="floatingPassword" placeholder="Parola">	
+					</div>
+					
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#registermodal">Kaydol</button>
+			  </div>
+			  
+			  <div id="ögretmen" class="container tab-pane fade"><br>
+					<div class="form-floating mb-3">
+						<label for="floatingInput">E-posta Girişi</label>
+						<input type="email" class="form-control" id="floatingInput" placeholder="ögretmen@mail.com">
+					</div>
+					<div class="form-floating">
+						<label for="floatingPassword">Parola</label>
+						<input type="password" class="form-control" id="floatingPassword" placeholder="Parola">	
+					</div>
+					
+			  </div>
+			  </div>
+
+
+		</div>
+		
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+		  <input type="submit" class="btn btn-primary" value="Giriş Yap">
+		</div>
+	</form>
+	  </div>
+	</div>
+  </div>
+
+
+  <div class="modal fade" id="registermodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Veli Kayıt</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<form action="#" method="POST">
+			{% csrf_token %}
+			<div class="modal-body">
+				<div class="form-floating mb-3">
+					<label for="floatingInput">Velinin Adı Soyadı</label>
+					<input type="text" name="ebeveynName" class="form-control" id="floatingInput" placeholder="Velinin Adı/Soyadı">
+				</div>
+				<div class="form-floating mb-3">
+					<label for="floatingInput">Öğrencinin Adı Soyadı</label>
+					<input type="text" name="studentName" class="form-control" id="floatingInput" placeholder="Öğrencinin Adı/Soyadı">
+				</div>
+				<div class="form-floating mb-3">
+					<label for="floatingInput">Velinin E-posta Adresi</label>
+					<input type="email" name="Email" class="form-control" id="floatingInput" placeholder="Velinin E-posta Adresi">
+				</div>
+				<div class="form-floating">
+					<label for="floatingPassword">Parola</label>
+					<input type="password" name="Password" class="form-control" id="floatingPassword" placeholder="Parola">	
+				</div>
+				<div class="form-floating">
+					<label for="floatingPassword">Parolayı Yeniden Giriniz</label>
+					<input type="password" name="PasswordConfirm" class="form-control" id="floatingPassword" placeholder="Parolayı Yeniden Giriniz">	
+				</div>
+				
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+			<input type="submit" class="btn btn-primary" value="Kaydet">
+			</div>
+		</form>
+	  </div>
+	</div>
+  </div>
+
+

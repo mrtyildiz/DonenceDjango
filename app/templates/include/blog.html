@@ -1,0 +1,32 @@
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+  <div class="col-md-8 text-center heading-section ftco-animate">
+    <h2 class="mb-4">Blog</h2>
+    <p>Derslerin bulunduğu alan burası olacak</p>
+  </div>
+</div>
+        <div class="row">
+          {% for Blog in Blo %}
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('{{ Blog.image.url }}');">
+                                <div class="meta-date text-center p-2">
+                  
+                  <span class="yr">{{ Blog.Date|date:"M d, Y" }}</span>
+                </div>
+              </a>
+              <div class="text bg-white p-4">
+                <h3 class="heading"><a href="#">{{ Blog.Header }}</a></h3>
+                <p>{{ Blog.Explanation }}</p>
+                <div class="d-flex align-items-center mt-4">
+                    <p class="mb-0"><a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#pdfmodal">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor%}
+        </div>
+    </div>
+</section>

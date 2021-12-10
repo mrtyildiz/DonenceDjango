@@ -1,0 +1,72 @@
+		
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      {% for footer in foot %}
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+                <h2 class="ftco-heading-2">İletişim Adreslerimiz</h2>
+                <div class="block-23 mb-3">
+                  <ul>
+                    <li><span class="icon icon-map-marker"></span><span class="text">{{ footer.adress }}</span></li>
+                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">{{ footer.telephone }}</span></a></li>
+                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">{{ footer.email }}</span></a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2">Recent Blog</h2>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(/static/images/image_1.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Dec 25, 2018</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-5 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(/static/images/image_2.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> Dec 25, 2018</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="/"><span class="ion-ios-arrow-round-forward mr-2"></span>Ana Sayfa</a></li>
+                <li><a href="about"><span class="ion-ios-arrow-round-forward mr-2"></span>Hakkında</a></li>
+                <li><a href="Teacher"><span class="ion-ios-arrow-round-forward mr-2"></span>Öğretmenlerimiz</a></li>
+                <li><a href="Courses"><span class="ion-ios-arrow-round-forward mr-2"></span>Dersler</a></li>
+                <li><a href="Blog"><span class="ion-ios-arrow-round-forward mr-2"></span>Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+
+            <div class="ftco-footer-widget mb-5">
+                <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="{{ footer.twitter }}"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="{{ footer.facebook }}"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="{{ footer.instagram }}"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      {% endfor%}
+      </footer>
